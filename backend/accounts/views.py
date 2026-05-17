@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-from rest_framework.authtoken.models import Token
+from rest_framework_simplejwt.tokens import RefreshToken
 
 class RegisterView(APIView):
     def post(self, request):
@@ -20,11 +20,12 @@ class RegisterView(APIView):
         try:
             # Username is set as the email
             user = User.objects.create_user(username=email, email=email, password=password, first_name=name)
-            token, _ = Token.objects.get_or_create(user=user)
+            refresh = RefreshToken.for_user(user)
             return Response({
                 'id': user.id,
                 'email': user.email,
-                'token': token.key
+                'access_token': str(refresh.access_token),
+                'refresh_token': str(refresh)
             }, status=status.HTTP_201_CREATED)
         except Exception as e:
             return Response({'error': str(e)}, status=400)
@@ -41,8 +42,9 @@ class LoginView(APIView):
         if user is None:
             return Response({'error': 'Invalid credentials'}, status=401)
 
-        token, _ = Token.objects.get_or_create(user=user)
+        refresh = RefreshToken.for_user(user)
         return Response({
-            'access_token': token.key,
+            'access_token': str(refresh.access_token),
+            'refresh_token': str(refresh),
             'user': {'id': user.id, 'email': user.email},
         }, status=status.HTTP_200_OK)
