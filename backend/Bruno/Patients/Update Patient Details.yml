@@ -1,0 +1,15 @@
+info:
+  name: Update Patient Details
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://localhost:8000/api/patients/YOUR_PATIENT_UUID/
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

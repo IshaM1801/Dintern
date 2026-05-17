@@ -1,0 +1,24 @@
+info:
+  name: Update Doctor Details
+  type: http
+  seq: 3
+
+http:
+  method: PUT
+  url: http://localhost:8000/api/doctors/4f4b1c2b-83d6-4d3d-970b-96ec8de8b899/
+  headers:
+    - name: Authorization
+      value: Token 632b7e9bd0c7c6a25d2aab6bcb34c75ccd5abeb0
+  body:
+    type: json
+    data: |-
+      {
+          "specialty": "Pediatric Cardiology",
+          "experience": 13
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

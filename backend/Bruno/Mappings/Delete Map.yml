@@ -1,0 +1,17 @@
+info:
+  name: Delete Map
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: http://localhost:8000/api/mappings/ad2dcf61-5703-4411-b1f3-f1c4db5b804c/
+  auth:
+    type: bearer
+    token: eyJhbGciOiJFUzI1NiIsImtpZCI6ImRhNjQzZmUzLTBmNGQtNGYwOS05ZGFjLTJiYjYxYzc0ZTUwZCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N5dmNkeWFkenZkdWRuZ3lndHJsLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZDdjMGVhOC0zMDkyLTQzYjktYTgxOC1hNDY0OGRhYTg2NjYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc5MDQxMzczLCJpYXQiOjE3NzkwMzc3NzMsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc3OTAzNzc3M31dLCJzZXNzaW9uX2lkIjoiMWZkYTcxZGYtOTkyOS00OTUzLWEwZTUtNzdkNWUzYTZjMDE3IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.jqGzM-EGS3Tz-HAQZm6BA-lejvZICEXvSfNxGXsGUBRZ15u0vZM0kWDopVFDoiWlC2VkgNmtvBxSssRcDS3n_w
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

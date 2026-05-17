@@ -1,0 +1,25 @@
+info:
+  name: Patient
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8000/api/patients/
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Jane Miller",
+          "age": 34,
+          "condition": "Hypertension"
+        }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJFUzI1NiIsImtpZCI6ImRhNjQzZmUzLTBmNGQtNGYwOS05ZGFjLTJiYjYxYzc0ZTUwZCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3N5dmNkeWFkenZkdWRuZ3lndHJsLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJmZDdjMGVhOC0zMDkyLTQzYjktYTgxOC1hNDY0OGRhYTg2NjYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc5MDM3NTcxLCJpYXQiOjE3NzkwMzM5NzEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJUZXN0IFVzZXIifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc3OTAzMzk3MX1dLCJzZXNzaW9uX2lkIjoiNDNiMmRhY2UtZjQ4ZC00MWVmLWI5OWYtMzQyMmYxNjEyODg1IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.pvs9s8T0SrcWLzOz6-p-nSAJZzPnn98--mOMd9HLPy-M7aRMkZSh6guRUtZ0lvisR8izV5F4u9gnSmEuaVF21Q
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
